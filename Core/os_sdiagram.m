@@ -1,4 +1,4 @@
-function [p,N] = sdiagram(varargin);
+function [p,N] = os_stabilisation(varargin);
 %SDIAGRAM Stability diagram, used for all methods (internal function)
 %
 % p = sdiagram(f,Poles,NoPoles,MIF) produces a stabilization diagram for a single
