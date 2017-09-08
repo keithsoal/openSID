@@ -4,6 +4,7 @@
 % This function runs through a demonstration of the openSID toolbox on
 % simulated data.
 % Keith Soal
+clear;close all;clc;
 
 % Generate simulated 3DOF data
 m = [100 100 100];
@@ -56,7 +57,7 @@ figure()
 Mm = size(M,2); % grid resolution
 x = linspace(1,Mm,Mm); % x-grid
 y = linspace(1,Mm,Mm); % y-grid
-os_bar3(M,x,y,[],jet(50))
+os_bar3c(M,x,y,[],jet(50))
 colorbar
 colormap(jet(50))
 view(90,90);

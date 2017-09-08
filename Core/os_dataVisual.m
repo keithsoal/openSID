@@ -1,5 +1,6 @@
 % os_dataVisual generates a class for data visualisation
 % openSID
+% Based on an example by Goran Jelicic (DLR)
 % Keith Soal    01-08-2017
 
 % devnotes
