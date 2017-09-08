@@ -4,6 +4,7 @@
 % This function runs through a demonstration of the openSID toolbox on
 % simulated data.
 % Keith Soal
+% version 8 September 2016
 clear;close all;clc;
 
 % Generate simulated 3DOF data

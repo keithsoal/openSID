@@ -1,4 +1,4 @@
-% 
+% 8 September 2016
 % [K,R] = gl2kr(A,G,C,L0)
 % 
 % Description:

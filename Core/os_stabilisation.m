@@ -2,6 +2,7 @@
 % based on sdiagram.m in Abravibe from Anders Brandt
 % openSID
 % Keith Soal    01-08-2017
+% version 8 September 2016
 
 % devnotes
 % 1. clean up

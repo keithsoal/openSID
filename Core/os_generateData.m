@@ -1,6 +1,7 @@
 % Generates simulated data
 % openSID
 % Keith Soal   01-08-2017
+% version 8 September 2016
 
 % devnotes
 % 1. generalise for higher DOFs

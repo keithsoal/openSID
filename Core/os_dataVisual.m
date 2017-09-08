@@ -2,6 +2,7 @@
 % openSID
 % Based on an example by Goran Jelicic (DLR)
 % Keith Soal    01-08-2017
+% version 8 September 2016
 
 % devnotes
 % 1. clean up

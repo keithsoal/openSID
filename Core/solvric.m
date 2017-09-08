@@ -1,4 +1,4 @@
-% 
+% 8 September 2016
 % [P,flag] = solvric(A,G,C,L0)
 % 
 % Description:

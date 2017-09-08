@@ -40,6 +40,7 @@
 % 1. Peeters, B. and de Roeck, G. (1999). Reference-based
 % stochastic-subspace identification for output-only modal analysis.
 % Mechanical Systems and Signal Processing.
+% version 8 September 2016
 
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 %                         Keith Soal 2017
