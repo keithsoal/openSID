@@ -18,7 +18,7 @@ clc
 % Add paths to Matlab
 opensid_path = fileparts(which('opensid.m'));
 addpath(opensid_path);
-addpath(genpath([opensid_path filesep 'Core']));
+addpath(genpath([opensid_path filesep 'CoreSafe']));
 
 if exist([opensid_path filesep 'Lib'], 'dir')
     addpath(genpath([opensid_path filesep 'Lib']));
