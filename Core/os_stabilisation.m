@@ -7,7 +7,7 @@
 % devnotes
 % 1. clean up
 
-function [fn,d] = os_stabilisation(Poles,MaxModes,Mif,modal)
+function [fn,d] = os_stabilisation(Poles,MaxModes,Mif,modal,fs)
 
 % Go through all requested orders
 NoPoles = 1:MaxModes;
@@ -37,7 +37,7 @@ elseif max(MIF(:,1)) < 1
     MIF=MIF/MifMax;
 end
 % frequency vector
-f = linspace(0,20,size(Mif,1));
+f = linspace(0,fs/2,size(Mif,1));
 
 if length(f) ~= length(MIF)
     fmif = f(end-length(MIF)+1:end);

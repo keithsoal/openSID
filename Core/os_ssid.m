@@ -363,7 +363,7 @@ if sil == 0
     fprintf('No.       freq.         damp.     \n')
     for ii = 1:length(fn)
         fprintf('%4.0f %11.4f      %10.4f \n', ...
-            no(ii),fn(ii),d(ii)*100)
+            no(ii),fn(ii),d(ii))
     end
 end
 

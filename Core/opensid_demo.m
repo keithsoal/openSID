@@ -39,7 +39,7 @@ for Order=1:MaxModes
     [sys,modal] = os_ssid(out,i,fs,Ir,W,Order,sys.AUX,1);
     Poles{Order}=modal.EW;
 end
-[fn,d] = os_stabilisation(Poles,MaxModes,Mif,modal);
+[fn,d] = os_stabilisation(Poles,MaxModes,Mif,modal,fs);
 
 
 % SSI-Data
@@ -86,24 +86,22 @@ end
 %--------------------------------------------------------------------------
 %                               Complexity plot
 %--------------------------------------------------------------------------
-if license('test','Neural_Network_Toolbox') == 1
-    figure()
-    set(gcf,'DefaultLineLineWidth',2)
-    rp = real(phi);
-    ip = imag(phi);
-    for nn=1:size(phi,1)
-        subplot(size(phi,1),1,nn)
-        for i = 1:3
-            hold on;plotv([rp(i,nn);ip(i,nn)]);
-        end
-        title(['Complexity plot mode' num2str(nn)],'Interpreter','latex')
-        xlabel('real','Interpreter','latex')
-        ylabel('imaginary','Interpreter','latex')
-        grid on
-        axis equal
-        set(gca,'fontsize',13)
+figure()
+set(gcf,'DefaultLineLineWidth',2)
+rp = real(phi);
+ip = imag(phi);
+for nn=1:size(phi,1)
+    subplot(size(phi,1),1,nn)
+    for i = 1:3
+    hold on;plotv([rp(i,nn);ip(i,nn)]);
     end
-end
+    title(['Complexity plot mode' num2str(nn)],'Interpreter','latex')
+    xlabel('real','Interpreter','latex')
+    ylabel('imaginary','Interpreter','latex')
+    grid on
+    axis equal
+    set(gca,'fontsize',13)
+end 
 
 
 

@@ -148,7 +148,7 @@ classdef os_dataVisual < handle
                         hold off
                         title('Power Spectral Density (PSD)','Interpreter','latex')
                         xlabel({'Frequency (Hz)'},'Interpreter','latex')
-                        ylabel('Acceleration ($m/s^2$)','Interpreter','latex')
+                        ylabel('Acceleration ($(m/s^2)^2 / Hz$)','Interpreter','latex')
                         grid on
                         set(gca,'fontsize',12)        
                     case 3 % statistical moments
@@ -170,7 +170,7 @@ classdef os_dataVisual < handle
                             plot(obj.S.mm(:,ii),'color',C(ii,:),'LineWidth',LW)
                             hold on;
                         end
-                        xlabel({'Time (s)'},'Interpreter','latex')
+                        xlabel({'Index (no.)'},'Interpreter','latex')
                         ylabel('Mean','Interpreter','latex')
                         grid on
                         subplot(2,2,2)
@@ -179,7 +179,7 @@ classdef os_dataVisual < handle
                             plot(obj.S.v(:,ii),'color',C(ii,:),'LineWidth',LW)
                             hold on;
                         end
-                        xlabel({'Time (s)'},'Interpreter','latex')
+                        xlabel({'Index (no.)'},'Interpreter','latex')
                         ylabel('Variance','Interpreter','latex')
                         grid on
                         subplot(2,2,3)
@@ -188,7 +188,7 @@ classdef os_dataVisual < handle
                             plot(obj.S.s(:,ii),'color',C(ii,:),'LineWidth',LW)
                             hold on;
                         end
-                        xlabel({'Time (s)'},'Interpreter','latex')
+                        xlabel({'Index (no.)'},'Interpreter','latex')
                         ylabel('Skewness','Interpreter','latex')
                         grid on
                         subplot(2,2,4)
@@ -197,7 +197,7 @@ classdef os_dataVisual < handle
                             plot(obj.S.k(:,ii),'color',C(ii,:),'LineWidth',LW)
                             hold on;
                         end
-                        xlabel({'Time (s)'},'Interpreter','latex')
+                        xlabel({'Index (no.)'},'Interpreter','latex')
                         ylabel('Kurtosis','Interpreter','latex')
                         grid on
                 end

@@ -40,17 +40,18 @@
 % 1. Peeters, B. and de Roeck, G. (1999). Reference-based
 % stochastic-subspace identification for output-only modal analysis.
 % Mechanical Systems and Signal Processing.
-% version 8 September 2016
+% version 8 February 2018
 
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-%                         Keith Soal 2017
+%                         Keith Soal 2018
 %                 questions to keithsoal at gmail.com
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 function [sys,modal] = os_ssic(y,i,fs,Ir,n,AUXin,lead,sil)
 
 % Check the arguments
-if (nargin < 6);sil = 0;end
+if (nargin < 8);sil = 0;end
+if (nargin < 7);lead = 10;end
 if (nargin < 6);AUXin = [];end
 if (nargin < 5);n = [];end
 if (nargin < 4);Ir = [];end
@@ -85,7 +86,7 @@ if (isempty(AUXin));
     end
     % correlation from 0 lag with time shift (lead)
     [~,lag] = find(t==0);
-    Rs = zeros(round(size(R,1)/2)-lead,3,3);
+    Rs = zeros(round(size(R,1)/2)-lead,l,ir);
     for nn = 1:ir
         for m = 1:l
             Rs(:,m,nn) = R(lag+lead:end,m,nn); % start at shifted time (Anders Brandt suggestion IOMAC)
@@ -223,7 +224,7 @@ if sil == 0
     fprintf('No.       freq.         damp.     \n')
     for ii = 1:length(fn)
         fprintf('%4.0f %11.4f      %10.4f \n', ...
-            no(ii),fn(ii),d(ii)*100)
+            no(ii),fn(ii),d(ii))
     end
 end
 
